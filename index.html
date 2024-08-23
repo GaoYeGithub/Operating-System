@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="desktop">
+        <div id="topbar">
+            <div id="clock"></div>
+        </div>
+    </div>
+  
+    <div id="welcome-screen" class="window">
+        <div class="window-header">
+            <h3>Welcome</h3>
+            <button class="close-btn">×</button>
+        </div>
+        <div class="window-content">
+            <img style="height: 96px; width: 96px; border-radius: 64px; object-fit: cover;"
+                src="icon.png" alt="icon" />
+            <div style="margin: 8px; text-align: center;">
+                <h1>Cool OS</h1>
+                <p style="text-align: center; margin: 0">
+                    Web Operating System
+                    <br />
+                    developed by Ye
+                </p>
+                <div style="width: 100%; justify-content: center; display: flex; align-items: center;">
+                    <p id="close-welcome" style="text-align: center; width: fit-content; padding: 8px 16px; border-radius: 24px; color: blue; cursor: pointer; border: 1px solid transparent; transition: border-color 0.3s ease; margin-bottom: 0px;">
+                        close
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

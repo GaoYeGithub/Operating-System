@@ -1,0 +1,62 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#desktop {
+  height: 100%;
+  background-image: url('background.jpg');
+  position: relative;
+}
+
+#topbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#clock {
+  float: right;
+}
+
+.window {
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
+  min-height: 150px;
+}
+
+.window-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#close-welcome:hover {
+  border-color: blue;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
