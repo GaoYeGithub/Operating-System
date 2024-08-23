@@ -11,11 +11,14 @@ body, html {
   position: relative;
 }
 
+
 #topbar {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 5px 10px;
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
   top: 0;
   left: 0;
   right: 0;
@@ -59,4 +62,35 @@ body, html {
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+#music-player button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#welcome-screen {
+  animation: fadeIn 1s ease-in;
+}
+
+.window-content img {
+  transition: transform 0.3s ease;
+}
+
+.window-content img:hover {
+  transform: scale(1.1);
 }

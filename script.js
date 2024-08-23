@@ -45,3 +45,51 @@ windows.forEach(win => {
         win.style.display = 'none';
     });
 });
+
+// Date functionality
+function updateDate() {
+    const now = new Date();
+    const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('date').textContent = dateString;
+}
+
+updateDate();
+setInterval(updateDate, 1000 * 60 * 60); // Update every hour
+
+// Music player functionality
+const audio = document.getElementById('audio');
+const playPauseButton = document.getElementById('play-pause');
+
+playPauseButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.textContent = 'Pause';
+    } else {
+        audio.pause();
+        playPauseButton.textContent = 'Play';
+    }
+});
+
+// Welcome screen animations
+const welcomeScreen = document.getElementById('welcome-screen');
+const capybaraImg = welcomeScreen.querySelector('img');
+
+capybaraImg.addEventListener('mouseover', () => {
+    capybaraImg.style.transform = 'scale(1.1)';
+});
+
+capybaraImg.addEventListener('mouseout', () => {
+    capybaraImg.style.transform = 'scale(1)';
+});
+
+// Randomly position welcome screen
+function randomPosition(element) {
+    const maxX = window.innerWidth - element.offsetWidth;
+    const maxY = window.innerHeight - element.offsetHeight;
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    element.style.left = randomX + 'px';
+    element.style.top = randomY + 'px';
+}
+
+randomPosition(welcomeScreen);
