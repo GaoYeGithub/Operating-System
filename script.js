@@ -46,7 +46,6 @@ windows.forEach(win => {
     });
 });
 
-// Date functionality
 function updateDate() {
     const now = new Date();
     const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
@@ -54,9 +53,8 @@ function updateDate() {
 }
 
 updateDate();
-setInterval(updateDate, 1000 * 60 * 60); // Update every hour
+setInterval(updateDate, 1000 * 60 * 60);
 
-// Music player functionality
 const audio = document.getElementById('audio');
 const playPauseButton = document.getElementById('play-pause');
 
@@ -70,7 +68,6 @@ playPauseButton.addEventListener('click', () => {
     }
 });
 
-// Welcome screen animations
 const welcomeScreen = document.getElementById('welcome-screen');
 const capybaraImg = welcomeScreen.querySelector('img');
 
@@ -82,7 +79,6 @@ capybaraImg.addEventListener('mouseout', () => {
     capybaraImg.style.transform = 'scale(1)';
 });
 
-// Randomly position welcome screen
 function randomPosition(element) {
     const maxX = window.innerWidth - element.offsetWidth;
     const maxY = window.innerHeight - element.offsetHeight;
